@@ -12,13 +12,12 @@ async function executeApiCall() {
 
     const results = await response.json();
 
-    //    console.log(results);
-
     container.innerHTML = "";
 
     createHtml(results);
   } catch (error) {
     console.log("An error has occured");
+    container.innerHTML = errorMessage("An error has occured");
   }
 }
 
