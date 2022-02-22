@@ -1,6 +1,6 @@
 const container = document.querySelector(".house-container");
 
-const wizardHousesUrl = "https://wizard-world-api.herokuapp.com/Houses/";
+const wizardHousesUrl = "https://wizard-world-api.herokuapp.com/Houses";
 
 async function executeApiCall() {
   try {
@@ -23,7 +23,7 @@ function createHtml(name) {
   console.log(name);
   name.forEach(function (results) {
     container.innerHTML += `<div class="wizard-houses">
-                            <a href="html/details.html">
+                            <a href="html/details.html?id=${results.id}">
                                 <p class="house-name">${results.name}</p>
                                 <p>Colour: ${results.houseColours}</p>
                                 <p>Animal: ${results.animal}</p>

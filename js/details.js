@@ -4,13 +4,15 @@ console.log(queryString);
 
 const params = new URLSearchParams(queryString);
 
-HTMLFormControlsCollection.log(params);
+console.log(params);
 
 const id = params.get("id");
 
-const url = "https://wizard-world-api.herokuapp.com/Houses/0367baf3-1cb6-4baf-bede-48e17e1cd005";
+const url = "https://wizard-world-api.herokuapp.com/Houses/" + id;
 
-const detailsContainer = document.querySelector(".details-container")
+const detailsContainer = document.querySelector(".details-container");
+
+const titleContainer = document.querySelector(".title-container");
 
 async function fetchHouse() {
    
@@ -21,6 +23,8 @@ async function fetchHouse() {
       console.log(details);
    
       detailsContainer.innerHTML = "";
+
+      titleContainer.innerHTML = `${details.name}`
    
       detailsContainer.innerHTML = `<h1>${details.name}</h1>
                                     <div class="detail-content">
