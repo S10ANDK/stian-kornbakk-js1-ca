@@ -9,18 +9,42 @@
 </head>
 <body>
     <main class="form-container">
-        <div>
-            <input name="fullname" id="full-name" placeholder="Full name"> 
-        </div>
-        <div>
-            <input name="subject" id="subject" placeholder="Subject">
-        </div>
-        <div>
-            <input name="email" id="email" placeholder="E-mail">
-        </div>
-        <div>
-            <input name="address" id="address" placeholder="Address">
-        </div>
+        <h1>Contact Form</h1>
+        <form id="contact-form">
+            <div>
+                <label>
+                    Full name (required)
+                    <input name="fullname" id="full-name" placeholder="...">
+                </label>
+                <div class="form-error-message" id="fullNameError">Please enter your full name</div>
+            </div>
+
+            <div>
+                <label>
+                    Subject (minimum 10 characters)
+                    <input name="subject" id="subject" placeholder="...">
+                </label>
+                <div class="form-error-message" id="subjectError">Subject must be at least 10 characters</div>
+            </div>
+
+            <div>
+                <label>
+                    E-mail (required)
+                    <input name="email" id="email" placeholder="...">
+                </label>
+                <div class="form-error-message" id="emailAddressError">E-mail Address is not valid</div>
+            </div>
+
+            <div>
+                <label>
+                    Address (minimum 25 characters)
+                    <input name="address" id="address" placeholder="...">
+                </label>
+                <div class="form-error-message" id="addressError">Address must be at least 25 characters</div>
+            </div>
+
+            <button type="submit">Submit</button>
+        <form>
     </main>
     <script src="../js/components/displayError.js"></script>
     <script src="../js/contact.js"></script>

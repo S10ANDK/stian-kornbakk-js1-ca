@@ -93,6 +93,37 @@ a {
 
 }
 
+.form-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    padding: 2.2em;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+input {
+    width: 100%;
+    margin-top: 3px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+label {
+    font-size: 1rem;
+    display: block;
+    margin-top: 20px;
+}
+
+.form-error-message {
+    display: none;
+    color: red;
+    font-size: 1rem;
+    margin-top: 3px;
+}
+
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
