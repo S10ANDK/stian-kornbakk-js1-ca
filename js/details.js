@@ -15,18 +15,17 @@ const detailsContainer = document.querySelector(".details-container");
 const titleContainer = document.querySelector(".title-container");
 
 async function fetchHouse() {
-   
-   try {
-      const response = await fetch(url);
-      const details = await response.json();
-   
-      console.log(details);
-   
-      detailsContainer.innerHTML = "";
+  try {
+    const response = await fetch(url);
+    const details = await response.json();
 
-      titleContainer.innerHTML = `${details.name}`
-   
-      detailsContainer.innerHTML = `<h1>${details.name}</h1>
+    console.log(details);
+
+    detailsContainer.innerHTML = "";
+
+    titleContainer.innerHTML = `${details.name}`;
+
+    detailsContainer.innerHTML = `<h1>${details.name}</h1>
                                     <div class="detail-content">
                                     <p>House Colours: ${details.houseColours}</p>
                                     <p>Founder: ${details.founder}</p>
@@ -37,13 +36,11 @@ async function fetchHouse() {
                                     </div>
                                     <div class="view-houses-container">
                                     <a href="../index.html" class="other-houses-link">View other houses</a>
-                                    </div>` 
-   }
-   catch {
-      console.log("An error has occured");
-      detailsContainer.innerHTML = errorMessage("An error has occured");
-   }
-
+                                    </div>`;
+  } catch {
+    console.log("An error has occured");
+    detailsContainer.innerHTML = errorMessage("An error has occured");
+  }
 }
 
 fetchHouse();

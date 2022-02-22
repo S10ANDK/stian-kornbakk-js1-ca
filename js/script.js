@@ -10,7 +10,7 @@ async function executeApiCall() {
 
     container.innerHTML = "";
 
-    createHtml(results);
+    generateHtml(results);
   } catch (error) {
     console.log("An error has occured");
     container.innerHTML = errorMessage("An error has occured");
@@ -19,7 +19,7 @@ async function executeApiCall() {
 
 executeApiCall();
 
-function createHtml(name) {
+function generateHtml(name) {
   console.log(name);
   name.forEach(function (results) {
     container.innerHTML += `<div class="wizard-houses">
@@ -33,4 +33,4 @@ function createHtml(name) {
   });
 }
 
-createHtml("Hello");
+generateHtml("Hello");

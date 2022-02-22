@@ -1,3 +1,3 @@
 function errorMessage(message) {
-    return `<div class="error-message">${message}</div>`;
-  }
+  return `<div class="error-message">${message}</div>`;
+}

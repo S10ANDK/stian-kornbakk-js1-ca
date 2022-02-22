@@ -82,7 +82,8 @@ a {
     color: rgb(119, 11, 11);
 }
 
-.view-houses-container {
+.view-houses-container,
+.home-container {
     text-align: center;
     margin-top: 100px;
 }
