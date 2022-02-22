@@ -9,12 +9,21 @@ h1 {
     font-size: 3.5rem;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .house-container {
     display: flex;
     text-align: center;
+    align-items: center;
+    margin: auto;
 }
 
-.wizard-houses {
+.wizard-houses,
+.detail-content {
+    max-width: 1000px;
     text-align: center;
     flex: 1;
     margin: 50px 20px;
@@ -23,6 +32,11 @@ h1 {
     border-color: rgb(95, 138, 95);
     border-radius: 20px;
     font-size: 2rem;
+    background-color: #e7dfeb;
+}
+
+.detail-content {
+    margin: auto;
 }
 
 .wizard-houses:hover {
@@ -50,12 +64,15 @@ h1 {
     padding: 20px;
 }
 
-.contact-button {
-   font-size: 2.5rem; 
-   color: black;
+.contact-link,
+.other-houses-link {
+    text-decoration: underline;
+    font-size: 2.5rem; 
+    color: black;
 }
 
-.contact-button:hover {
+.contact-link:hover,
+.other-houses-link:hover {
     text-decoration: none;
 } 
 
@@ -63,6 +80,17 @@ h1 {
     text-align: center;
     margin: auto;
     color: rgb(119, 11, 11);
+}
+
+.view-houses-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.other-houses-link {
+    text-align: center;
+    text-decoration: underline;
+
 }
 
 @keyframes rotate {
